@@ -1,2 +1,2 @@
 # dotfiles
-My Dotfiles
+My Dotfiles for i3, Xorg, Bash and Vim.
