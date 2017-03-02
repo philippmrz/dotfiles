@@ -101,7 +101,7 @@ if has('langmap') && exists('+langnoremap')
 endif
 set number
 " Add optional packages.
-"
+set encoding=utf-8
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
 packadd matchit
