@@ -100,7 +100,7 @@ bindsym $mod+1 workspace $work1
 bindsym $mod+2 workspace $work2
 bindsym $mod+3 workspace $work3
 bindsym $mod+4 workspace $work4
-bindsym $mod+t workspace $work5
+bindsym $mod+s workspace $work5
 bindsym $mod+q workspace $work6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -234,5 +234,5 @@ exec_always feh --bg-scale /home/phil/Pictures/darkgreen.png
 exec_always compton -f
 new_window none
 workspace_auto_back_and_forth yes
-exec setxkbmap -option caps:swapescape
-exec --no-startup-id nm-applet
+exec_always setxkbmap -option caps:swapescape
+exec_always --no-startup-id nm-applet
