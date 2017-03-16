@@ -122,5 +122,5 @@ fi
 alias i3conf='atom /home/phil/.config/i3/config'
 alias bashconf='atom /home/phil/.bashrc'
 alias inst='sudo apt install'
-alias resconf='atom /home/phil/.Xresources'
+alias xconf='atom /home/phil/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'

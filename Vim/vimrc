@@ -104,6 +104,7 @@ endif
 set number
 " Add optional packages.
 set encoding=utf-8
+set noundofile
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
 packadd matchit
