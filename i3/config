@@ -13,7 +13,7 @@ set $mod Mod1
 
 # Font fo window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:'DejaVu Sans Mono' 14
+font pango:'DejaVu Sans Mono' 0
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -30,6 +30,12 @@ bindsym $mod+Tab exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+client.focused          #0d47a1 #0d47a1 #ffffff #2979ff   #2979ff
+client.focused_inactive #2979ff #2979ff #ffffff #2979ff   #2979ff
+client.unfocused        #555555 #555555 #ffffff #2979ff   #2979ff
+client.urgent           #2979ff #2979ff #ffffff #2979ff   #2979ff
+client.placeholder      #2979ff #2979ff #ffffff #2979ff   #2979ff
 
 # start dmenu (a program launcher)
 bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -padding 450 -opacity 90 -hlfg-active "#d1eefc"
@@ -88,13 +94,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-set $work1 " term "
-set $work2 " net"
-set $work3 " music "
-set $work4 " ide "
-set $work5 " editor "
-set $work6 " files "
-set $work0 "   "
+set $work1 "1:"
+set $work2 "2:"
+set $work3 "3:"
+set $work4 "4:"
+set $work5 "5:"
+set $work6 "6:"
+set $work7 "7:"
 # switch to workspace
 bindsym $mod+1 workspace $work1
 bindsym $mod+2 workspace $work2
@@ -121,20 +127,18 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 assign [class="Gnome-terminal"] $work1
 assign [class="Google-chrome"] $work2
-for_window [class="Thunar"] layout tabbed
+for_window [class="Pantheon-files"] layout tabbed
+
 for_window [class="Sublime_text"] layout tabbed
 for_window [class="jetbrains-studio"] layout tabbed
-for_window [class="^.*"] border none
+for_window [class="^.*"] border pixel 2
 for_window [class="Gnome-terminal"] layout tabbed
 for_window [class="Spotify"] move to workspace $work3
 assign [class="jetbrains-studio"] $work4
 assign [class="Eclipse"] $work4
 assign [class="Sublime_text"] $work5
 assign [class="Atom"] $work5
-assign [class="Thunar"] $work6
-
-
-
+assign [class="Pantheon-files"] $work6
 
 
 # reload the configuration file
@@ -184,11 +188,11 @@ bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 
 bindsym $mod+Mod4+c exec google-chrome-stable --start-fullscreen
 bindsym $mod+Mod4+e exec eclipse
-bindsym $mod+Mod4+f exec thunar
+bindsym $mod+Mod4+f exec pantheon-files 
 bindsym $mod+ctrl+s exec /bin/android-studio/bin/studio.sh
 
 #startup
-exec google-chrome-stable
+exec google-chrome-stable --start-fullscreen
 exec_always ~/Scripts/polybar.sh 
 exec /bin/android-studio/bin/studio.sh
 exec pantheon-files 
@@ -197,7 +201,6 @@ exec urxvt
 exec atom
 exec_always feh --bg-scale /home/mrz/Pictures/blue.jpg
 exec_always compton -f
-new_window none
 workspace_auto_back_and_forth yes
 exec_always setxkbmap -option caps:swapescape
 exec_always --no-startup-id nm-applet
