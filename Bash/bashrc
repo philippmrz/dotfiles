@@ -119,8 +119,8 @@ fi
 
 #custom aliases
 
-alias i3conf='atom /home/phil/.config/i3/config'
-alias bashconf='atom /home/phil/.bashrc'
+alias i3conf='vim /home/mrz/.config/i3/config'
+alias bashconf='vim /home/mrz/.bashrc'
 alias inst='sudo apt install'
-alias xconf='atom /home/phil/.Xresources'
+alias xconf='vim /home/mrz/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'
