@@ -1,91 +1,43 @@
-!-------------------------------------------------------------------------------
-! Xft settings
-!-------------------------------------------------------------------------------
-
-Xft.dpi:                    96
-Xft.antialias:              false
-Xft.rgba:                   rgb
-Xft.hinting:                true
-Xft.hintstyle:              hintslight
-
-!-------------------------------------------------------------------------------
-! URxvt settings
-! Colours lifted from Solarized (http://ethanschoonover.com/solarized)
-! More info at:
-! http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod
-!-------------------------------------------------------------------------------
-
-URxvt.depth:                32
-URxvt.geometry:             90x30
-URxvt.transparent:          false
-URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
-URxvt.loginShell:           true
-URxvt.saveLines:            50
-URxvt.internalBorder:       3
-URxvt.lineSpace:            0
+URxvt.depth:  32
+URxvt.geometry:  80x25
+URxvt.transparent:  false
+URxvt.fading:  0
+URxvt.loginShell:  false
+URxvt.saveLines:  512
+URxvt.internalBorder:  3
+URxvt.lineSpace:  0
 
 ! Fonts
-URxvt.allow_bold:           false
-/* URxvt.font:                 -*-terminus-medium-r-normal-*-12-120-72-72-c-60-iso8859-1 */
-URxvt*font: xft:Monospace:pixelsize=18
-URxvt*boldFont: xft:Monospace:pixelsize=14
-
-! Fix font space
-URxvt*letterSpace: -1
+URxvt.allow_bold:  false
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=18
+URxvt*boldFont: xft:DejaVu Sans Mono:pixelsize=18
 
 ! Scrollbar
-URxvt.scrollStyle:          rxvt
-URxvt.scrollBar:            false
-
-! Perl extensions
-URxvt.matcher.button:       1
-URxvt.urlLauncher:          firefox
-
+URxvt.scrollStyle:  rxvt
+URxvt.scrollBar:  false
 ! Cursor
-URxvt.cursorBlink:          true
-URxvt.cursorColor:          #657b83
-URxvt.cursorUnderline:      false
+URxvt.cursorColor:  #0d47a1
+URxvt.cursorUnderline:  false
 
 ! Pointer
-URxvt.pointerBlank:         true
-
-!!Source http://github.com/altercation/solarized
-
-*background: #252525
-*cursorColor: #93a1a1
-*pointerColorBackground: #586e75
-*pointerColorForeground: #93a1a1
-
-!! black dark/light
-*color0: #073642
-*color8: #002b36
-
-!! red dark/light
-*color1: #dc322f
-*color9: #cb4b16
-
-!! green dark/light
-*color2: #859900
-*color10: #586e75
-
-!! yellow dark/light
-*color3: #b58900
-*color11: #657b83
-
-!! blue dark/light
-*color4: #268bd2
-*color12: #839496
-
-!! magenta dark/light
-*color5: #d33682
-*color13: #6c71c4
-
-!! cyan dark/light
-*color6: #2aa198
-*color14: #93a1a1
-
-!! white dark/light
-*color7: #eee8d5
-*color15: #fdf6e3
+URxvt.pointerBlank:  true
+URxvt*background: #000000
+URxvt*foreground: #999999
+URxvt*colorUL: yellow
+URvxt*fading: 60
+*color0: rgb:00/00/00
+*color1: rgb:d3/62/65
+*color2: rgb:ae/ce/91
+*color3: rgb:e7/e1/8c
+*color4: rgb:7a/7a/b0
+*color5: rgb:96/3c/59
+*color6: rgb:41/81/79
+*color7: rgb:be/be/be
+*color8: rgb:66/66/66
+*color9: rgb:ef/81/71
+*color10: rgb:e5/f7/79
+*color11: rgb:ff/f7/96
+*color12: rgb:41/86/be
+*color13: rgb:ef/9e/be
+*color14: rgb:71/be/be
+*color15: rgb:ff/ff/ff
