@@ -99,8 +99,13 @@ set $work2 "2:"
 set $work3 "3:"
 set $work4 "4:"
 set $work5 "5:"
+<<<<<<< HEAD
 set $work6 "6:"
 set $work7 "7:"
+=======
+set $work6 "6:"
+set $work7 "7:"
+>>>>>>> 089746bf99f6a363f679dbc39e27b1cde320f3a4
 # switch to workspace
 bindsym $mod+1 workspace $work1
 bindsym $mod+2 workspace $work2
@@ -197,12 +202,19 @@ exec_always ~/Scripts/polybar.sh
 exec /bin/android-studio/bin/studio.sh
 exec pantheon-files 
 exec spotify
+<<<<<<< HEAD
 exec urxvt
+=======
+exec_always urxvt
+>>>>>>> 089746bf99f6a363f679dbc39e27b1cde320f3a4
 exec atom
 exec_always feh --bg-scale /home/mrz/Pictures/blue.jpg
 exec_always compton -f
 workspace_auto_back_and_forth yes
 exec_always setxkbmap -option caps:swapescape
 exec_always --no-startup-id nm-applet
+<<<<<<< HEAD
 exec_always pkill polybar
 exec_always polybar main 
+=======
+>>>>>>> 089746bf99f6a363f679dbc39e27b1cde320f3a4
