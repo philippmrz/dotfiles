@@ -31,11 +31,11 @@ bindsym $mod+Tab exec urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 
-client.focused          #0d47a1 #0d47a1 #ffffff #2979ff   #2979ff
-client.focused_inactive #2979ff #2979ff #ffffff #2979ff   #2979ff
-client.unfocused        #555555 #555555 #ffffff #2979ff   #2979ff
-client.urgent           #2979ff #2979ff #ffffff #2979ff   #2979ff
-client.placeholder      #2979ff #2979ff #ffffff #2979ff   #2979ff
+client.focused          #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
+client.focused_inactive #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
+client.unfocused        #555555 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
+client.urgent           #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
+client.placeholder      #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 
 # start dmenu (a program launcher)
 bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -padding 450 -opacity 90 -hlfg-active "#d1eefc"
