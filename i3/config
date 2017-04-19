@@ -125,17 +125,15 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-assign [class="Gnome-terminal"] $work1
 assign [class="Google-chrome"] $work2
 for_window [class="Pantheon-files"] layout tabbed
-
 for_window [class="Sublime_text"] layout tabbed
 for_window [class="jetbrains-studio"] layout tabbed
 for_window [class="^.*"] border pixel 2
 for_window [class="Gnome-terminal"] layout tabbed
 for_window [class="Spotify"] move to workspace $work3
 assign [class="jetbrains-studio"] $work4
-assign [class="Eclipse"] $work4
+assign [class="Eclipse"] $work5
 assign [class="Sublime_text"] $work5
 assign [class="Atom"] $work5
 assign [class="Pantheon-files"] $work6
