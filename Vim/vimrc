@@ -104,4 +104,8 @@ set noundofile
 " The matchit plugin makes the % command work better, but it is not backwards
 " compatible.
 packadd matchit
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 set t_Co=256
