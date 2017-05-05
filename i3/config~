@@ -38,7 +38,7 @@ client.urgent           #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 client.placeholder      #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 
 # start dmenu (a program launcher)
-bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -padding 450 -opacity 90 -hlfg-active "#d1eefc"
+bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -opacity 90 -hlfg-active "#d1eefc"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -125,10 +125,8 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-assign [class="Gnome-terminal"] $work1
 assign [class="Google-chrome"] $work2
 for_window [class="Pantheon-files"] layout tabbed
-
 for_window [class="Sublime_text"] layout tabbed
 for_window [class="jetbrains-studio"] layout tabbed
 for_window [class="^.*"] border pixel 2
@@ -197,8 +195,7 @@ exec google-chrome-stable --start-fullscreen
 exec /bin/android-studio/bin/studio.sh
 exec pantheon-files 
 exec spotify
-exec urxvt
-exec atom
+exec urxvt exec atom
 exec_always feh --bg-scale /home/mrz/Pictures/blue.jpg
 exec_always compton -f
 workspace_auto_back_and_forth yes
