@@ -1,4 +1,3 @@
-
 " An example for a vimrc file.
 "
 " Maintainer:	Bram Moolenaar <Bram@vim.org>
@@ -9,7 +8,7 @@
 "	      for Amiga:  s:.vimrc
 "  for MS-DOS and Win32:  $VIM\_vimrc
 "	    for OpenVMS:  sys$login:.vimrc
-
+execute pathogen#infect()
 if v:progname =~? "evim"
   finish
 endif
@@ -109,3 +108,13 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set t_Co=256
+autocmd BufNewFile *.html r /home/mrz/Dotfiles/Vim/vim/templates/sk.html
+autocmd BufNewFile *.css r /home/mrz/Dotfiles/Vim/vim/templates/sk.css
+autocmd BufNewFile *.sh r /home/mrz/Dotfiles/Vim/vim/templates/sk.sh
+autocmd BufNewFile *.py r /home/mrz/Dotfiles/Vim/vim/templates/sk.py
+set nobackup
+set smarttab
+set smartindent
+inoremap { {<CR><BS>}<Esc>ko
+inoremap ( (<CR><BS>)<Esc>i
+let g:closetag_filenames="*.html"

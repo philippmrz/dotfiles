@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/mrz/.config/polybar'
+let g:netrw_dirhist_2='/home/mrz/websites'
+let g:netrw_dirhist_3='/home/mrz/Dotfiles'
+let g:netrw_dirhist_4='/home/mrz/Dotfiles/Vim'
