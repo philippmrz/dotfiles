@@ -124,3 +124,7 @@ alias bashconf='vim /home/mrz/.bashrc'
 alias inst='sudo apt install'
 alias xconf='vim /home/mrz/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'
+
+#PATH
+
+export PATH=$PATH:/usr/local/go/bin

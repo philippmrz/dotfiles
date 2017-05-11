@@ -3,7 +3,7 @@
 ;   The README contains alot of information
 
 [colors]
-background = #c5e1a5
+background = #212121
 background-alt = #1976d2
 foreground = #ffffff
 foreground-alt = #ff0000

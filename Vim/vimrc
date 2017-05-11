@@ -88,7 +88,7 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
-set background=light
+set background=dark
 
 if has('langmap') && exists('+langnoremap')
   " Prevent that the langmap option applies to characters that result from a
@@ -118,3 +118,13 @@ set smartindent
 inoremap { {<CR><BS>}<Esc>ko
 inoremap ( (<CR><BS>)<Esc>i
 let g:closetag_filenames="*.html"
+colorscheme desert
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_html_checkers = ['w3']
