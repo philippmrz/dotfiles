@@ -124,6 +124,7 @@ alias bashconf='vim /home/mrz/.bashrc'
 alias inst='sudo apt install'
 alias xconf='vim /home/mrz/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'
+alias net='ping google.com'
 
 #PATH
 
