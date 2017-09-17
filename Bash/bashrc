@@ -127,7 +127,11 @@ alias updupg='sudo apt update && sudo apt upgrade'
 alias net='ping google.com'
 alias energy='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias susp='systemctl suspend'
+alias del='rm -rf'
+alias reconnect='nmcli radio wifi off && nmcli radio wifi on && ping google.com'
 
 #PATH
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH="$HOME/.node_mods_global/bin:$PATH"
+export PATH=`pwd`/flutter/bin:$PATH

@@ -1,2 +1,0 @@
-color10: hostname 
-color12: location ~

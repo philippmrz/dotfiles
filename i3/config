@@ -193,7 +193,7 @@ exec_always pkill polybar
 exec google-chrome-stable --start-fullscreen
 exec /bin/android-studio/bin/studio.sh
 exec pantheon-files 
-exec spotify
+exec atom 
 exec urxvt
 exec_always feh --bg-scale /home/mrz/Pictures/blue.jpg
 exec_always compton -f
