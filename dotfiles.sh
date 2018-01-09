@@ -25,11 +25,13 @@ fi
 echo "You want to install: $install"
 read
 
-if [ "command -v sudo" = '' ]
+if [ $EUID -ne 0]
 then
-  echo 'Sudo not installed, install to continue'
+  echo 'Not root, run as root to continue'
   exit
 fi
+
+apt install vim git $install
 
 sudo apt install $install
 
