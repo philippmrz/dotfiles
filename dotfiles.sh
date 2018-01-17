@@ -47,7 +47,14 @@ fi
 echo "You want to install: $install"
 read
 
-sudo apt install $install
+if [ $EUID -ne 0]
+then
+  echo 'Not root, run as root to continue'
+  exit
+fi
+
+apt install vim $install
+
 
 rm -rf ~/.bashrc ~/.config/i3 ~/.vim 
 ln -s ~/Dotfiles/Bash/bashrc ~/.bashrc
