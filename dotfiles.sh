@@ -1,4 +1,26 @@
 #!/bin/bash
+echo 'This script takes your dotfile repo and symlinks the important stuff into your home directory.'
+echo 'It also installs programs like git, i3, dunst, compton, vim etc.'
+echo 'Feel free to clone and tweak for your own needs'
+if [ "command -v sudo" = '' ]
+then
+  echo 'Sudo not installed, install to continue'
+  exit
+fi
+
+echo 'Installing git'
+apt install git
+echo 'Enter username and email for git config:'
+echo 'user.name: ' && read gitname
+"git config --global user.name '$gitname'"
+echo 'user.email: ' && read gitemail
+"git config --global user.email '$gitemail'"
+cd ~
+echo 'Enter repo user and dotfile name'
+echo 'Repo user: ' && read repouser
+echo 'Repo name: ' && read reponame
+git clone https://www.github.com/$repouser/$reponame
+
 echo 'Tap enter for the programs you want to install'
 echo 'i3WM: ' && read i3
 echo $i3
@@ -24,12 +46,6 @@ fi
 
 echo "You want to install: $install"
 read
-
-if [ "command -v sudo" = '' ]
-then
-  echo 'Sudo not installed, install to continue'
-  exit
-fi
 
 sudo apt install $install
 

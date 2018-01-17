@@ -129,6 +129,7 @@ alias energy='upower -i /org/freedesktop/UPower/devices/battery_BAT0'
 alias susp='systemctl suspend'
 alias del='rm -rf'
 alias reconnect='nmcli radio wifi off && sleep 5 && nmcli radio wifi on && sleep 10 && ping google.com'
+alias brightness='xrandr --output eDP-1 --brightness'
 
 #PATH
 
