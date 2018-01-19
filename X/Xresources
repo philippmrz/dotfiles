@@ -9,9 +9,9 @@ URxvt.lineSpace:  0
 
 ! Fonts
 URxvt.allow_bold:  false
-URxvt*font: xft:Noto Mono:pixelsize=18
+URxvt*font: xft:IBM Plex Mono:pixelsize=18
 Urxvt*letterSpace: 1
-URxvt*faceName: xft:Noto Mono:pixelsize=16
+URxvt*faceName: xft:IBM Plex Mono:pixelsize=16
 
 ! Scrollbar
 URxvt.scrollStyle:  rxvt
