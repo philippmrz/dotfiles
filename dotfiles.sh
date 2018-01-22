@@ -18,6 +18,7 @@ fi
 
 #Install various apps
 echo "Install vim? (y/n)"
+read
 if [ "$REPLY" = "y" ]; then
    apt install vim
 fi
@@ -29,6 +30,7 @@ if [ "$REPLY" = "y" ]; then
 fi
 
 echo "Install rofi? (y/n)"
+read
 if [ "$REPLY" = "y" ]; then
    apt install rofi 
 fi
@@ -45,8 +47,22 @@ if [ "$REPLY" = "y" ]; then
    apt install rxvt-unicode-256color 
 fi
 
-echo "Install git? (y/n)"
+echo "Install i3? (y/n)"
 read
 if [ "$REPLY" = "y" ]; then
-   apt install git
+   apt install i3 
 fi
+
+if [ ! -d "~/.config" ]; then
+   mkdir ~/.config
+fi
+
+if [ -f ~/.bashrc ]; then
+   rm ~/.bashrc
+fi
+
+ln -s ~/Dotfiles/i3 ~/.config/i3
+ln -s ~/Dotfiles/X/Xresources ~/.Xresources
+ln -s ~/Dotfiles/Bash/bashrc ~/.bashrc
+ln -s ~/Dotfiles/Vim/vim ~/.vim
+ln -s ~/Dotfiles/Vim/vimrc ~/.vimrc
