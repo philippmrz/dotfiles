@@ -1,8 +1,10 @@
 URxvt.depth:  32
 URxvt.geometry:  80x25
 URxvt.transparent:  false
-URxvt.fading:  0
-URxvt.loginShell:  false
+URxvt.fadeColor: #212121
+URxvt.fading:  20
+URxvt.loginShell: true 
+URxvt*scrollTtyOutput:  false
 URxvt.saveLines:  512
 URxvt.internalBorder:  3
 URxvt.lineSpace:  0
@@ -21,13 +23,13 @@ URxvt.cursorColor:  #33691e
 
 ! Pointer
 URxvt.pointerBlank:  false
-URxvt*background: #212121
-URxvt*foreground: #c8c8c8
+URxvt*background: #002b36
+URxvt*foreground: #eee8d5
 URxvt*colorUL: white
 URvxt*fading: 60
 *color0: #251f1f
 *color1: #eb4509
-*color2: #94e76b
+*color2: #000000
 
 *color3: #ffac18
 *color4: #46aede
