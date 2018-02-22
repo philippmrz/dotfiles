@@ -188,3 +188,4 @@ exec_always setxkbmap -option caps:swapescape
 exec dunst
 exec urxvt
 exec firefox
+exec start-pulseaudio-x11
