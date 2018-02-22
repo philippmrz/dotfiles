@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/mrz/Dotfiles/Vim'
-let g:netrw_dirhist_2='/home/mrz/www'
-let g:netrw_dirhist_3='/etc/php'
-let g:netrw_dirhist_4='/etc/php/7.0'
-let g:netrw_dirhist_5='/etc/php/7.0/fpm'
