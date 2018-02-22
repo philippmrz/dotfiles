@@ -66,3 +66,5 @@ ln -s ~/Dotfiles/X/Xresources ~/.Xresources
 ln -s ~/Dotfiles/Bash/bashrc ~/.bashrc
 ln -s ~/Dotfiles/Vim/vim ~/.vim
 ln -s ~/Dotfiles/Vim/vimrc ~/.vimrc
+ln -s ~/Dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s ~/Dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
