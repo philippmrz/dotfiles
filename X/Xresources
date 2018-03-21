@@ -11,6 +11,7 @@ URxvt.lineSpace:  0
 
 ! Fonts
 URxvt.allow_bold:  false
+<<<<<<< HEAD
 URxvt*font: xft:DejaVu Sans Mono:pixelsize=18
 Urxvt*letterSpace: -3
 URxvt*faceName: xft:IBM Plex Mono:pixelsize=16
