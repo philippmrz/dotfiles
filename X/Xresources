@@ -1,0 +1,46 @@
+URxvt.depth:  32
+URxvt.geometry:  80x25
+URxvt.transparent:  false
+URxvt.fadeColor: #212121
+URxvt.fading:  20
+URxvt.loginShell: true 
+URxvt*scrollTtyOutput:  false
+URxvt.saveLines:  512
+URxvt.internalBorder:  3
+URxvt.lineSpace:  0
+
+! Fonts
+URxvt.allow_bold:  false
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=18
+Urxvt*letterSpace: -3
+URxvt*faceName: xft:IBM Plex Mono:pixelsize=16
+
+! Scrollbar
+URxvt.scrollStyle:  rxvt
+URxvt.scrollBar:  false
+! Cursor
+URxvt.cursorColor:  #33691e
+
+! Pointer
+URxvt.pointerBlank:  false
+URxvt*background: #002b36
+URxvt*foreground: #eee8d5
+URxvt*colorUL: white
+URvxt*fading: 60
+*color0: #FFEB3B
+*color1: #ff5722
+*color2: #dc322f
+*color3: #d33682
+*color4: #6c71c4
+*color5: #268bd2
+*color6: #2aa198
+*color7: #859900
+
+*color8: #5e5e5e
+*color9: #eb4509
+*color10: #95e76b
+*color11: #ffac18
+*color12: #46aede
+*color13: #e32c57
+*color14: #d6dbac
+*color15: #efefef
