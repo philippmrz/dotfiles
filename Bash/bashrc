@@ -56,15 +56,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-<<<<<<< HEAD
 PS1="\[\e[1m\]\[\e[31m\]\u\[\e[m\] at \[\e[31m\]\A\[\e[m\] in \[\e[1m\]\[\e[31m\]\W\[\e[m\]\[\e[0m\]: "
-=======
-if [ "$color_prompt" = yes ]; then
-    PS1="\[\e[1m\]\[\e[31m\]\u\[\e[m\] at \[\e[31m\]\A\[\e[m\] in \[\e[1m\]\[\e[31m\]\W\[\e[m\]\[\e[0m\]: "
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
->>>>>>> 0072a39e52404b425fa58beca99cf3653ca45797
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
@@ -140,7 +132,6 @@ alias brightness='sudo vim /sys/class/backlight/intel_backlight/brightness'
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.node_mods_global/bin:$PATH"
 export PATH=`pwd`/flutter/bin:$PATH
-<<<<<<< HEAD
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc'; fi
