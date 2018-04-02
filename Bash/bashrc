@@ -126,6 +126,7 @@ alias susp='systemctl suspend'
 alias del='rm -rf'
 alias reconnect='nmcli radio wifi off && sleep 5 && nmcli radio wifi on && sleep 10 && ping google.com'
 alias brightness='sudo vim /sys/class/backlight/intel_backlight/brightness'
+alias dockcomp='sudo docker-compose'
 
 #PATH
 
