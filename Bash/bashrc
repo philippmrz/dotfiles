@@ -133,6 +133,7 @@ alias dockcomp='sudo docker-compose'
 export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.node_mods_global/bin:$PATH"
 export PATH=`pwd`/flutter/bin:$PATH
+export PATH=/home/mrz/miniconda3/bin:$PATH
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc'; fi
