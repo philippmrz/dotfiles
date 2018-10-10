@@ -143,3 +143,4 @@ if [ -f '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/ho
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 tmux
+cd Projects
