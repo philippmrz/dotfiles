@@ -20,7 +20,8 @@ URxvt.scrollStyle:  rxvt
 URxvt.scrollBar:  false
 ! Cursor
 URxvt.cursorColor:  #33691e
-
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
 ! Pointer
 URxvt.pointerBlank:  false
 URxvt*background: #002b36
