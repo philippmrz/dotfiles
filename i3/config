@@ -26,7 +26,7 @@ font pango:'DejaVu Sans Mono' 0
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Tab exec urxvt 
+bindsym $mod+t exec urxvt 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -37,39 +37,29 @@ client.unfocused        #212121 #212121 #212121 #212121   #212121
 client.urgent           #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 client.placeholder      #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 
+
+
 # start dmenu (a program launcher)
-bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -opacity 90 -hlfg-active "#d1eefc"
+# bindsym $mod+shift+d exec rofi -show run -lines 5 -width 100 -comlumns 19 -font "DejaVu Sans Mono 16" -fg "#092712" -bg "#3c6b56" -bc "#D1EEFC" -opacity 90 -hlfg-active "#d1eefc"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindcode 133 --release exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+adiaeresis move up
-bindsym $mod+Shift+odiaeresis move right
-
-# alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -82,110 +72,70 @@ bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
 
-set $work1 "1:"
-set $work2 "2:"
-set $work3 "3:"
-set $work4 "4:"
-set $work5 "5:"
-set $work6 "6:"
-set $work7 "7:"
+set $work1 "Web"
+set $work2 "Term"
+set $work3 "Talk"
+set $work4 "Spotify"
+set $work5 "Misc"
+
 # switch to workspace
 bindsym $mod+1 workspace $work1
 bindsym $mod+2 workspace $work2
 bindsym $mod+3 workspace $work3
 bindsym $mod+4 workspace $work4
-bindsym $mod+d workspace $work5
-bindsym $mod+q workspace $work6
-bindsym $mod+7 workspace $work7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace $work0
+bindsym $mod+5 workspace $work5
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $work1
 bindsym $mod+Shift+2 move container to workspace $work2
 bindsym $mod+Shift+3 move container to workspace $work3
 bindsym $mod+Shift+4 move container to workspace $work4
-bindsym $mod+Shift+5 move container to workspace $work5
-bindsym $mod+Shift+6 move container to workspace $work6
-bindsym $mod+Shift+7 move container to workspace $work7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+5 move container to workspace $work4
 
-assign [class="Firefox"] $work2
+assign [class="google-chrome"] $work1
 assign [class="code"] $work3
-for_window [class="^.*"] border pixel 2
-
+assign [class="urxvt"] $work2
+for_window [class="^.*"] border pixel 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+shift+r restart
 # exit i3 (logs you out of your X session)
-
 bindsym $mod+Shift+e exec i3-msg exit
-bindsym $mod+Shift+l exec i3lock i3lock -i ~/Pictures/flyingisland.png default -n
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym odiaeresis resize grow width 10 px or 10 ppt
+# Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset 'Master' 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset 'Master' 5%- #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl -- set-sink-mute @DEFAULT_SINK@ toggle # mute sound
+bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle # mute mic
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
-# Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
-
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
-
 bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
-
-bindsym $mod+Mod4+c exec google-chrome-stable --start-fullscreen
-bindsym $mod+Mod4+e exec eclipse
-bindsym $mod+Mod4+f exec pantheon-files 
-bindsym $mod+ctrl+s exec /bin/android-studio/bin/studio.sh
 
 #startup
 exec xrdb merge ~/.Xresources
-exec_always feh --bg-scale /home/mrz/Downloads/wallpaper.jpg
+exec_always feh --bg-scale /home/mrz/Downloads/wallpaper.png
 exec_always compton -f
 exec_always setxkbmap -option caps:swapescape
 exec dunst
 exec urxvt
-exec firefox
+exec google-chrome 
+exec --no-startup-id i3-msg 'workspace google-chrome --new-window web.whatsapp.com discord.com/app'
 exec start-pulseaudio-x11
+exec xinput set-prop 12 309
+exec setxkbmap -layout us,de
+exec setxkbmap -option 'grp:win_space_toggle'
+bar {
+    font pango:Inconsolata 10
+      position top
+        tray_output none
+          status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasourcednf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
+}

@@ -68,3 +68,5 @@ ln -s ~/Dotfiles/Vim/vim ~/.vim
 ln -s ~/Dotfiles/Vim/vimrc ~/.vimrc
 ln -s ~/Dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/Dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
+
+echo "Dont forget to symlink X/30-touchpad.conf in /etc/X11/xorg.conf.d"
