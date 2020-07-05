@@ -32,7 +32,7 @@ bindsym $mod+t exec urxvt
 bindsym $mod+Shift+q kill
 
 client.focused          #212121 #212121 #212121 #212121   #212121
-client.focused_inactive #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
+client.focused_inactive #666666 #666666 #666666 #666666   #666666
 client.unfocused        #212121 #212121 #212121 #212121   #212121
 client.urgent           #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
 client.placeholder      #ffe0b2 #ffe0b2 #ffffff #ffe0b2   #ffe0b2
@@ -51,6 +51,10 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
+#Alternatively, chrome style tabs
+bindsym $mod+Tab focus up
+bindsym $mod+Shift+Tab focus down 
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -80,7 +84,7 @@ bindsym $mod+a focus parent
 
 set $work1 "Web"
 set $work2 "Term"
-set $work3 "Talk"
+set $work3 "Code"
 set $work4 "Spotify"
 set $work5 "Misc"
 
@@ -98,8 +102,8 @@ bindsym $mod+Shift+3 move container to workspace $work3
 bindsym $mod+Shift+4 move container to workspace $work4
 bindsym $mod+Shift+5 move container to workspace $work4
 
-assign [class="google-chrome"] $work1
-assign [class="code"] $work3
+for_window [class="Google-chrome"] move container to workspace $work1
+for_window [class="Code"] move container to workspace $work3
 assign [class="urxvt"] $work2
 for_window [class="^.*"] border pixel 0
 
@@ -127,15 +131,14 @@ exec_always compton -f
 exec_always setxkbmap -option caps:swapescape
 exec dunst
 exec urxvt
-exec google-chrome 
-exec --no-startup-id i3-msg 'workspace google-chrome --new-window web.whatsapp.com discord.com/app'
+exec google-chrome
 exec start-pulseaudio-x11
 exec xinput set-prop 12 309
 exec setxkbmap -layout us,de
 exec setxkbmap -option 'grp:win_space_toggle'
 bar {
-    font pango:Inconsolata 10
-      position top
-        tray_output none
-          status_command bumblebee-status -m nic disk:root cpu memory battery date time pasink pasourcednf -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" -t solarized-powerline
+    font pango: PowerlineSymbols 12
+    position top
+    tray_output none
+    status_command bumblebee-status -m memory battery date time -p time.format="%H:%M Week %V" date.format="%a, %b %d %Y" -t iceberg-rainbow 
 }
