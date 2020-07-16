@@ -115,8 +115,8 @@ fi
 
 #custom aliases
 
-alias i3conf='vim /home/mrz/.config/i3/config'
-alias bashconf='vim /home/mrz/.bashrc'
+alias i3conf='vim $HOME/mrz/.config/i3/config'
+alias bashconf='vim $HOME/.bashrc'
 alias inst='sudo apt install'
 alias xconf='vim /home/mrz/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'
@@ -149,7 +149,6 @@ if [ -f '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/ho
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc'; fi
-tmux
 cd Projects
 
 # >>> conda initialize >>>

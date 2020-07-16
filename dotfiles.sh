@@ -53,20 +53,24 @@ if [ "$REPLY" = "y" ]; then
    apt install i3 
 fi
 
-if [ ! -d "~/.config" ]; then
-   mkdir ~/.config
+if [ ! -d "$HOME/.config" ]; then
+   mkdir $HOME/.config
 fi
 
-if [ -f ~/.bashrc ]; then
-   rm ~/.bashrc
+if [ -f $HOME/.bashrc ]; then
+   rm $HOME/.bashrc
 fi
 
-ln -s ~/Dotfiles/i3 ~/.config/i3
-ln -s ~/Dotfiles/X/Xresources ~/.Xresources
-ln -s ~/Dotfiles/Bash/bashrc ~/.bashrc
-ln -s ~/Dotfiles/Vim/vim ~/.vim
-ln -s ~/Dotfiles/Vim/vimrc ~/.vimrc
-ln -s ~/Dotfiles/vscode/keybindings.json ~/.config/Code/User/keybindings.json
-ln -s ~/Dotfiles/vscode/settings.json ~/.config/Code/User/settings.json
+rm /home/phil/.bashrc
+rm /home/phil/.vimrc
+rm /home/phil/.Xresources
+
+ln -s /home/phil/Dotfiles/i3 /home/phil/.config/i3
+ln -s /home/phil/Dotfiles/X/Xresources /home/phil/.Xresources
+ln -s /home/phil/Dotfiles/Bash/bashrc /home/phil/.bashrc
+ln -s /home/phil/Dotfiles/Vim/vim /home/phil/.vim
+ln -s /home/phil/Dotfiles/Vim/vimrc home/phil/.vimrc
+ln -s /home/phil/Dotfiles/vscode/keybindings.json /home/phil/.config/Code/User/keybindings.json
+ln -s /home/phil/Dotfiles/vscode/settings.json /home/phil/.config/Code/User/settings.json
 
 echo "Dont forget to symlink X/30-touchpad.conf in /etc/X11/xorg.conf.d"
