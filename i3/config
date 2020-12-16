@@ -102,7 +102,7 @@ bindsym $mod+Shift+3 move container to workspace $work3
 bindsym $mod+Shift+4 move container to workspace $work4
 bindsym $mod+Shift+5 move container to workspace $work4
 
-for_window [class="Google-chrome"] move container to workspace $work1
+assign [class="Google-chrome"] $work1
 for_window [class="Code"] move container to workspace $work3
 assign [class="urxvt"] $work2
 for_window [class="^.*"] border pixel 0
@@ -123,10 +123,11 @@ bindsym XF86AudioMicMute exec --no-startup-id amixer set Capture toggle # mute m
 bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym XF86AudioPrev exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym --release Print exec --no-startup-id import png:- | xclip -selection clipboard -t image/png 
 
 #startup
 exec xrdb merge ~/.Xresources
-exec_always feh --bg-scale /home/mrz/Downloads/wallpaper.png
+exec_always feh --bg-scale /home/phil/679f679.png
 exec_always compton -f
 exec_always setxkbmap -option caps:swapescape
 exec dunst
@@ -134,11 +135,12 @@ exec urxvt
 exec google-chrome
 exec start-pulseaudio-x11
 exec xinput set-prop 12 309
-exec setxkbmap -layout us,de
-exec setxkbmap -option 'grp:win_space_toggle'
+exec_always setxkbmap -layout us,de
+exec_always setxkbmap -option 'grp:win_space_toggle'
 bar {
     font pango: PowerlineSymbols 12
     position top
     tray_output none
-    status_command bumblebee-status -m memory battery date time -p time.format="%H:%M Week %V" date.format="%a, %b %d %Y" -t iceberg-rainbow 
+    status_command i3status
+    
 }

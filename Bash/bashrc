@@ -115,10 +115,11 @@ fi
 
 #custom aliases
 
-alias i3conf='vim $HOME/mrz/.config/i3/config'
+alias i3conf='vim $HOME/.config/i3/config'
+alias screenclip='import png:- | xclip -selection clipboard -t image/png -i'
 alias bashconf='vim $HOME/.bashrc'
 alias inst='sudo apt install'
-alias xconf='vim /home/mrz/.Xresources'
+alias xconf='vim /home/phil/.Xresources'
 alias updupg='sudo apt update && sudo apt upgrade'
 alias net='ping google.com'
 alias energy='upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage'
@@ -128,6 +129,7 @@ alias reconnect='nmcli radio wifi off && sleep 5 && nmcli radio wifi on && sleep
 alias brightness='sudo vim /sys/class/backlight/intel_backlight/brightness'
 alias dockcomp='sudo docker-compose'
 alias open='xdg-open'
+alias screensh='scrot "screen.png" -s -e "mv $f /home/phil/screen.png"'
 
 #PATH
 
@@ -143,24 +145,25 @@ export PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 export PATH="$HOME/Android/Sdk/bin:$PATH"
 export PATH="$HOME/Projects/android-studio/bin:$PATH"
 export PATH="$HOME/Downloads/Deb/mongo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '/home/phil/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '/home/phil/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/mrz/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 cd Projects
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mrz/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/phil/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/mrz/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mrz/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/phil/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/phil/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mrz/anaconda3/bin:$PATH"
+        export PATH="/home/phil/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup

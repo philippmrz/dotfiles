@@ -1,7 +1,7 @@
 URxvt.depth:  32
 URxvt.geometry:  80x25
 URxvt.transparent:  false
-URxvt.fadeColor: #212121
+URxvt.fadeColor: #777777
 URxvt.fading:  20
 URxvt.loginShell: true 
 URxvt*scrollTtyOutput:  false
@@ -21,13 +21,11 @@ URxvt.scrollBar:  false
 ! Cursor
 URxvt.cursorColor:  #33691e
 urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
 ! Pointer
 URxvt.pointerBlank:  false
-URxvt*background: #002b36
-URxvt*foreground: #eee8d5
+URxvt*background: #FFFFFF
+URxvt*foreground: #000000
 URxvt*colorUL: white
-URvxt*fading: 60
 *color0: #FFEB3B
 *color1: #ff5722
 *color2: #dc322f
